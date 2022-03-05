@@ -1,0 +1,36 @@
+*{
+       padding: 0;
+}
+/* body{
+    width: 50%;
+    text-align: center;
+} */
+h1, p {
+    margin: 15px;
+}
+p{
+    text-align: justify;
+}
+img{
+    width: 50%;
+margin: 10px 100px;
+}
+small{
+   
+    opacity : 0.7;
+}
+sup{
+    opacity : 0.4;
+}
+.blue{
+    background-color: #000066;
+}
+.verde{
+    background-color: #00ff00;
+}
+.red{
+    background-color: #ff0000;
+}
+.pink{
+    background-color: #ff1493;
+}

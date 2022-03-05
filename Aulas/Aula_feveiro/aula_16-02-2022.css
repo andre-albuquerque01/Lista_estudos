@@ -1,0 +1,97 @@
+/* .exemplo{
+    Degrade
+    width: 400px;
+    height: 280px;
+    background-color: #000;
+    margin: auto;
+    margin-top: 5%;
+    background: linear-gradient(45deg, #fff, #000);
+} */
+
+/* Animação */
+/* @keyframes sant {
+    0% {
+        background-color: #000;
+    }
+
+    20% {
+        background-color: #fff;
+        left: 400px;
+    }
+
+    40% {
+        background-color: rgb(153, 10, 10);
+        left: 400px;
+        top: 280px;
+    }
+
+    60% {
+        background-color: rgb(99, 206, 33);
+        top: 280px;
+    }
+
+} */
+
+/* div {
+    width: 400px;
+    height: 280px;
+    background-color: #000;
+    position: absolute; */
+/* Nome da keyFrame */
+/* animation-name: sant; */
+/* Duração */
+/* animation-duration: 2s; */
+/* Delay */
+/* animation-delay: 2s; */
+/* Loop */
+/* animation-iteration-count: infinite;
+} */
+
+/* Sombreamento */
+/* div {
+    width: 400px;
+    height: 280px;
+    background-color: #000;
+    margin: auto;
+    margin-top: 25px;
+    color: #fff; */
+    /* box-shadow: 10px 10px 10px #Ff0; */
+/* }
+div:hover {
+    width: 400px;
+    height: 280px;
+    background-color: #000;
+    margin: auto;
+    color: #f00;
+    margin-top: 25px; */
+    /* Sombreamento na caixo */
+    /* box-shadow: 10px 10px 10px #Ff0; */
+    /* Sombreamento no texto */
+    /* text-shadow: 10px 2px 2px #Ff0;
+} */
+
+/* Transição */
+/* div {
+    width: 400px;
+    height: 280px;
+    background-color: #000;
+    margin: auto;
+    margin-top: 25px;
+    transition: all 2s linear;
+}
+div:hover {
+    width: 400px;
+    height: 280px;
+    background-color: #0ff;
+    margin: auto;
+    margin-top: 25px;
+} */
+
+/* Word-wrap */
+/* div{
+    width: 50px;
+    border: 1px solid black;
+    height: 300px;
+    word-wrap: break-word;
+    
+} */

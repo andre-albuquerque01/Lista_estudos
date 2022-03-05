@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.conteiner {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    background-color: rgb(109, 109, 109);
+    /* Todos na mesma linha sem respeitar o tamanho */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+
+    /* Mesma coluna */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* Respeitar o tamanho e troca de linha */
+    /* flex-wrap: wrap; */
+
+    /* Ajunta o flex-wrap e flex-direction, e substitui */
+    flex-flow: row wrap;
+
+    /* Alinhado ao centro da linha */
+    /* justify-content: center; */
+    /* Espaço ao redor */
+    /* justify-content: space-around; */
+    /* Espaço ao redor, porem no centro */
+    justify-content: space-evenly;
+
+    align-items: center;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 10px;
+    /* Manipulando o tamanho em relação aos outros */
+    /* flex: 2; */
+}
+
+.test3 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 10px;
+    /* Manipulando o tamanho em relação aos outros */
+    /* flex: 5; */
+    /* Para mover ela mesma */
+    align-self: flex-start;
+    order: -1;
+}

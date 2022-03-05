@@ -1,0 +1,17 @@
+#idade{
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#afirmacao{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#boa{
+    margin-top: 200px;
+   text-align: center;
+   color: rgb(255,255,255);
+   color: #ff1; 
+}
+tbody tr:hover{
+background-color: #000;
+}

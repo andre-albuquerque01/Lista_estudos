@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+    <link rel="stylesheet" href="style03.css">
+</head>
+
+<body>
+    <form action="porAi.html" method="post">
+        <fieldset>
+            <br>
+            <legend>Dados da Area – Dados Pessoais</legend>
+            <label for="nome_completo">Nome completo *</label>
+            <input type="text" name="nome_completo" id="nome_completo" maxlength="100" class="input" placeholder="Nome completo" required>
+
+            <label for="email">Email *</label>
+            <input type="email" name="email" id="email" class="input" placeholder="email@email.com" required>
+
+            <label for="celular">Celular *</label>
+            <input type="number" name="celular" id="celular" class="input" max="99999999999" placeholder="00-00000-0000" required>
+
+            <label for="endereço">Endereço</label>
+            <input type="text" name="endereço" class="input" id="endereço" placeholder="Endereço">
+
+            <label for="cep">CEP</label>
+            <input type="number" name="cep" id="cep" class="input" max="99999999" placeholder="CEP">
+
+            <label for="data">Data de Nascimento</label>
+            <input type="date" name="data" id="data" class="input" max="2004-01-31" placeholder="00/00/0000">
+            <br>
+        </fieldset>
+
+        <fieldset id="id2">
+            <br>
+            <legend id="leg2">Dados da Area – Dados Escolares</legend>
+            <label for="nome_curso">Nome do Curso 1 *</label>
+            <input type="text" name="nome_curso" id="nome_curso" class="input" required>
+
+            <label for="horas">Horas*</label>
+            <input type="numer" name="horas" id="horas" class="input" required>
+
+            <label for="conclusao">Mês/Ano de conclusão *</label>
+            <input type="month" name="conclusao" id="conclusao" class="input" min="2015-02" max="2024-12" required>
+
+            <label for="nome_curso2">Nome do Curso 2 *</label>
+            <input type="text" name="nome_curso2" id="nome_curso2" class="input" required>
+
+            <label for="horas2">Horas*</label>
+            <input type="numer" name="horas2" id="horas2" class="input" required>
+
+            <label for="conclusao2">Mês/Ano de conclusão *</label>
+            <input type="month" name="conclusao2" id="conclusao2" class="input" min="2015-02" max="2024-12" required>
+
+            <label for="nome_curso3">Nome do Curso 3 *</label>
+            <input type="text" name="nome_curso3" id="nome_curso3" class="input" required>
+
+            <label for="horas3">Horas*</label>
+            <input type="numer" name="horas3" id="horas3" class="input" required>
+
+            <label for="conclusao3">Mês/Ano de conclusão *</label>
+            <input type="month" name="conclusao3" id="conclusao3" class="input" min="2015-02" max="2024-12" required>
+            <br>
+        </fieldset>
+
+        <fieldset id="id3">
+            <br>
+            <legend id="leg3">Dados da Area – Dados Profissionais</legend>
+            <label for="nome_empresa">Nome da Empresa 1 *</label>
+            <input type="text" name="nome_empresa" id="nome_empresa" class="input" required>
+
+            <label for="atual">Atual?*</label>
+            <select name="atual" id="atual" required>
+                <option value="nao">Não</option>
+                <option value="sim" selected="selected">Sim</option>
+            </select>
+
+            <label for="tempo">Tempo de trabalho* </label>
+            <input type="number" name="tempo" id="tempo" class="input" required>
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" name="cargo" id="cargo" class="input">
+
+            <label for="atividades">Descrição das atividades</label>
+            <textarea name="descricao" id="atividades"></textarea>
+
+            <label for="nome_empresa2">Nome da Empresa 2 *</label>
+            <input type="text" name="nome_empresa" id="nome_empresa" class="input" required>
+
+            <label for="atual2">Atual?*</label>
+            <select name="atual" id="atual2" required>
+                <option value="nao">Não</option>
+                <option value="sim" selected="selected">Sim</option>
+            </select>
+
+            <label for="tempo2">Tempo de trabalho* </label>
+            <input type="number" name="tempo" id="tempo2" class="input" required>
+
+            <label for="cargo2">Cargo:</label>
+            <input type="text" name="cargo" id="cargo2" class="input">
+
+            <label for="atividades2">Descrição das atividades</label>
+            <textarea name="descricao" id="atividades2"></textarea>
+
+            <label for="nome_empresa3">Nome da Empresa 3 *</label>
+            <input type="text" name="nome_empresa" id="nome_empresa3" class="input" required>
+
+            <label for="atual3">Atual?*</label>
+            <select name="atual" id="atual3" required>
+                <option value="nao">Não</option>
+                <option value="sim" selected="selected">Sim</option>
+            </select>
+
+            <label for="tempo3">Tempo de trabalho* </label>
+            <input type="number" name="tempo" id="tempo3" class="input" required>
+
+            <label for="cargo3">Cargo:</label>
+            <input type="text" name="cargo" id="cargo3" class="input">
+
+            <label for="atividades3">Descrição das atividades</label>
+            <textarea name="descricao" id="atividades3"></textarea>
+            <br>
+        </fieldset>
+        <br>
+        <input type="checkbox" id="check" required> <label for="check" id="aceito">Eu aceito o uso do meus dados, <a
+                href="leia.html">Leia os termos.</a></label>
+        <br>
+        <button>Enviar</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+fieldset{
+    background-color: #819db5;
+    border: 2px solid #ff0000;
+    border-radius: 50px;
+    width: 70%;
+    margin-left: 180px;
+}
+legend{
+    color: #5900ff;
+    text-align: center;
+}
+textarea, select{
+    margin: 5px;
+    display: block;
+    width: 700px;
+    height: 25px;
+    align-items: center;
+    margin-left: 100px;
+}
+select{
+    width: 710px;
+    height: 25px;
+}
+button{
+    margin-top: 10px;
+    margin-left: 550px;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(255, 122, 122);
+    border: 2px solid rgb(255, 122, 122);
+}
+button:hover{
+    background-color: #ffffff;
+    color: #5900ff;
+}
+.input{
+    margin: 5px;
+    display: block;
+    width: 700px;
+    height: 25px;
+    align-items: center;
+    margin-left: 100px;
+}
+a{
+    text-decoration: none;
+    color: #a676ff;
+}
+a:hover{
+    text-decoration: underline;
+    color: #5900ff;
+}
+#id2{
+    background-color: #7ac1ff;
+    border: 2px solid #6a3939;
+    border-radius: 50px;
+}
+#id3{
+    background-color: #5b7e9d;
+    border: 2px solid #ff0000;
+    border-radius: 50px;
+}
+#leg2{
+    color: #ff0000;
+}
+#leg3{
+    color: #36cd72;
+}
+label{
+    color: #f2f1f3;
+    padding: 20px;
+}
+#check{
+    color: #8103ff;
+    margin-left: 500px;
+}
+#aceito{
+    color: #8103ff;
+    margin-left: -15px;
+}

@@ -1,0 +1,57 @@
+/* @media (min-width:600px) {
+    body {
+        box-sizing: border-box;
+        background-color: #0f0;
+    }
+
+    .brasil {
+        background-image: url("https://imagepng.org/wp-content/uploads/2017/04/bandeira-do-brasil-1024x717.png");
+        background-repeat: no-repeat;
+        width: max(100%, 40px);
+        height: 630px ;
+        /* Não há como colocar, pois a imagem é estatica object-fit: ; */
+/*
+    }
+}
+
+@media (max-width:600px) {
+    body {
+        background-color: aqua;
+        box-sizing: border-box;
+    }
+
+    .selecao {
+        width: max(100%, 40px);
+        background-image: url("https://i1.wp.com/dreamleaguesoccer.com.br/wp-content/uploads/logo-sele%C3%A7%C3%A3o-brasileira.png?fit=512%2C512&ssl=1");
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+
+    }
+} */
+@media (min-width:600px) {
+    body {
+        box-sizing: border-box;
+        background-color: #0f0;
+        overflow: hidden;
+    }
+
+    img {
+        width: max(100%, 10px);
+        height: 600px;
+        object-fit: scale-down;
+        
+    }
+}
+
+@media (max-width:600px) {
+    body {
+        background-color: aqua;
+        box-sizing: border-box;
+    }
+
+    img {
+        width: max(100%, 100px);
+    }
+}

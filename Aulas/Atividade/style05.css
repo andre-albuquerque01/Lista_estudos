@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background: linear-gradient(90deg, #F0F8FF, #FFFAFA);
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #f60f1d;
+}
+
+nav {
+    padding: 15px;
+    margin-left: 75%;
+}
+
+nav h1 {
+    color: #fff;
+    position: absolute;
+    margin-left: -30%;
+}
+
+nav h1:hover {
+    color: #0f0;
+    font-size: 30px;
+}
+
+nav a {
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #f3d4f1;
+    font-size: 23px;
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    height: 60px;
+    background-color: #f60f1d;
+    position: absolute;
+    bottom: 0;
+}
+
+footer p {
+    padding: 20px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #a5d3d8;
+    text-decoration: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    font-size: 17px;
+    text-decoration: underline;
+}
+
+footer p:hover {
+
+    color: #3d8;
+}
+
+
+.primeira {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    background: linear-gradient(90deg, #000, #fff);
+    margin-left: 4%;
+    margin-top: 10px;
+    animation-name: sant;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    color: #00f;
+    text-align: center;
+    font-size: 50px;
+}
+
+.segunda {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-left: 60%;
+    margin-top: 100px;
+    position: absolute;
+    background: linear-gradient(180deg, #0f0, #00f);
+    animation-name: sant1;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    text-align: center;
+    font-size: 50px;
+    color: #f00;
+}
+
+.terceira {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    margin-left: 4%;
+    margin-top: 300px;
+    background: linear-gradient(360deg, #000, #fff, #000);
+    text-align: center;
+    font-size: 50px;
+    color: #0f0;
+}
+
+.terceira:hover {
+    border-radius: 100%;
+    animation: sant2 1s cubic-bezier(0, .25, .7125, .1) infinite;
+    background-image: url("https://lh3.googleusercontent.com/-9bywr1MwDoc/TXFrgZE0_CI/AAAAAAAAFDY/QrJ9JhgM6xs/s1600/tumblr_le66ab5i841qzt4vjo1_r2_500.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+}
+
+@keyframes sant {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(200px);
+    }
+
+    27% {
+        box-shadow:
+            -10px 0 0 #444,
+            -20px 0 0 #555,
+            -30px 0 0 #666,
+            -40px 0 0 #777,
+            -50px 0 0 #999;
+    }
+
+    77% {
+        box-shadow:
+            10px 0 0 #999,
+            20px 0 0 #777,
+            30px 0 0 #666,
+            40px 0 0 #555,
+            50px 0 0 #444;
+    }
+
+}
+
+@keyframes sant1 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(200px);
+    }
+
+    27% {
+        box-shadow:
+            0 -10px 0 #00FF00,
+            0 -20px 0 #00EE00,
+            0 -30px 0 #00CD00,
+            0 -40px 0 #32CD32,
+            0 -50px 0 #228B22;
+    }
+
+    77% {
+        box-shadow:
+            0 10px 0 #0000FF,
+            0 20px 0 #0000EE,
+            0 30px 0 #0000CD,
+            0 40px 0 #00008B,
+            0 50px 0 #27408B;
+    }
+}
+
+@keyframes sant2 {
+    0% {
+        transform: rotate(0px);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 340px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        left: 0;
+        right: 0;
+    }
+
+    body {
+        background: linear-gradient(90deg, #F0F8FF, #FFFAFA);
+        padding: 0;
+    }
+
+    header {
+        width: 100%;
+        height: 70px;
+        background-color: #f60f1d;
+    }
+
+    nav {
+        margin: 0;
+        padding: 0px;
+    }
+
+    nav h1 {
+        color: #fff;
+        position: absolute;
+        margin-left: 25%;
+        margin-top: 10%;
+    }
+    
+    nav h1:hover {
+        color: #0f0;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px;
+        text-align: center;
+        margin: 0;
+    }
+
+    nav a:hover {
+        color: #f3d4f1;
+        font-size: 18px;
+        text-decoration: underline;
+    }
+
+    footer {
+        width: 100%;
+        height: 130px;
+        background-color: #f60f1d;
+        position: absolute;
+        /* bottom: 0; */
+        padding: 0px;
+    }
+    
+    footer p {
+        padding: 0px;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #a5d3d8;
+        text-decoration: none;
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        font-size: 17px;
+        text-decoration: underline;
+    }
+
+    footer p:hover {
+
+        color: #3d8;
+    }
+
+
+    .primeira {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        position: absolute;
+        background: linear-gradient(90deg, #000, #fff);
+        margin-left: 4%;
+        margin-top: 10px;
+        animation-name: sant;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        color: #00f;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .segunda {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin-left: 60%;
+        margin-top: 120px;
+        position: absolute;
+        background: linear-gradient(180deg, #0f0, #00f);
+        animation-name: sant1;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        font-size: 30px;
+        color: #f00;
+    }
+
+    .terceira {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        /* margin-left: 4%; */
+        margin-top: 200px;
+        background: linear-gradient(360deg, #000, #fff, #000);
+        text-align: center;
+        font-size: 30px;
+        color: #0f0;
+    }
+
+    .terceira:hover {
+        border-radius: 100%;
+        animation: sant2 1s cubic-bezier(0, .25, .7125, .1) infinite;
+        background-image: url("https://lh3.googleusercontent.com/-9bywr1MwDoc/TXFrgZE0_CI/AAAAAAAAFDY/QrJ9JhgM6xs/s1600/tumblr_le66ab5i841qzt4vjo1_r2_500.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        color: transparent;
+    }
+
+    @keyframes sant {
+        0% {
+            transform: translateX(0px);
+        }
+
+        25% {
+            transform: translateX(100px);
+        }
+
+        27% {
+            box-shadow:
+                -10px 0 0 #444,
+                -20px 0 0 #555,
+                -30px 0 0 #666,
+                -40px 0 0 #777,
+                -50px 0 0 #999;
+        }
+
+        77% {
+            box-shadow:
+                10px 0 0 #999,
+                20px 0 0 #777,
+                30px 0 0 #666,
+                40px 0 0 #555,
+                50px 0 0 #444;
+        }
+
+    }
+
+    @keyframes sant1 {
+        0% {
+            transform: translateY(0px);
+        }
+
+        25% {
+            transform: translateY(100px);
+        }
+
+        27% {
+            box-shadow:
+                0 -10px 0 #00FF00,
+                0 -20px 0 #00EE00,
+                0 -30px 0 #00CD00,
+                0 -40px 0 #32CD32,
+                0 -50px 0 #228B22;
+        }
+
+        77% {
+            box-shadow:
+                0 10px 0 #0000FF,
+                0 20px 0 #0000EE,
+                0 30px 0 #0000CD,
+                0 40px 0 #00008B,
+                0 50px 0 #27408B;
+        }
+    }
+
+    @keyframes sant2 {
+        0% {
+            transform: rotate(0px);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        left: 0;
+        right: 0;
+    }
+
+    body {
+        background: linear-gradient(90deg, #F0F8FF, #FFFAFA);
+        padding: 0;
+    }
+
+    header {
+        width: 100%;
+        height: 70px;
+        background-color: #f60f1d;
+    }
+
+    nav {
+        margin: 0;
+        padding: 0px;
+    }
+
+    nav h1 {
+        color: #fff;
+        position: absolute;
+        margin-top: 5%;
+        text-align: center;
+        margin: 0;
+        top: 3%;
+    }
+    
+    nav h1:hover {
+        color: #0f0;
+    }
+    
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 0%;
+    }
+
+    nav a:hover {
+        color: #f3d4f1;
+        font-size: 23px;
+        text-decoration: underline;
+    }
+
+    footer {
+        width: 100%;
+        height: 130px;
+        background-color: #f60f1d;
+        position: absolute;
+        /* bottom: 0; */
+        padding: 0px;
+    }
+    
+    footer p {
+        padding: 0px;
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #a5d3d8;
+        text-decoration: none;
+         margin-top: 5%;   
+    }
+
+    footer a {
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        font-size: 17px;
+        text-decoration: underline;
+    }
+
+    footer p:hover {
+
+        color: #3d8;
+    }
+
+
+    .primeira {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        position: absolute;
+        background: linear-gradient(90deg, #000, #fff);
+        margin-left: 4%;
+        margin-top: 10px;
+        animation-name: sant;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        color: #00f;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .segunda {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        margin-left: 60%;
+        margin-top: 200px;
+        position: absolute;
+        background: linear-gradient(180deg, #0f0, #00f);
+        animation-name: sant1;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-iteration-count: infinite;
+        text-align: center;
+        font-size: 30px;
+        color: #f00;
+    }
+
+    .terceira {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        /* margin-left: 4%; */
+        margin-top: 400px;
+        background: linear-gradient(360deg, #000, #fff, #000);
+        text-align: center;
+        font-size: 30px;
+        color: #0f0;
+    }
+
+    .terceira:hover {
+        border-radius: 100%;
+        animation: sant2 1s cubic-bezier(0, .25, .7125, .1) infinite;
+        background-image: url("https://lh3.googleusercontent.com/-9bywr1MwDoc/TXFrgZE0_CI/AAAAAAAAFDY/QrJ9JhgM6xs/s1600/tumblr_le66ab5i841qzt4vjo1_r2_500.gif");
+        background-repeat: no-repeat;
+        background-position: center;
+        color: transparent;
+    }
+
+    @keyframes sant {
+        0% {
+            transform: translateX(0px);
+        }
+
+        25% {
+            transform: translateX(150px);
+        }
+
+        27% {
+            box-shadow:
+                -10px 0 0 #444,
+                -20px 0 0 #555,
+                -30px 0 0 #666,
+                -40px 0 0 #777,
+                -50px 0 0 #999;
+        }
+
+        77% {
+            box-shadow:
+                10px 0 0 #999,
+                20px 0 0 #777,
+                30px 0 0 #666,
+                40px 0 0 #555,
+                50px 0 0 #444;
+        }
+
+    }
+
+    @keyframes sant1 {
+        0% {
+            transform: translateY(0px);
+        }
+
+        25% {
+            transform: translateY(150px);
+        }
+
+        27% {
+            box-shadow:
+                0 -10px 0 #00FF00,
+                0 -20px 0 #00EE00,
+                0 -30px 0 #00CD00,
+                0 -40px 0 #32CD32,
+                0 -50px 0 #228B22;
+        }
+
+        77% {
+            box-shadow:
+                0 10px 0 #0000FF,
+                0 20px 0 #0000EE,
+                0 30px 0 #0000CD,
+                0 40px 0 #00008B,
+                0 50px 0 #27408B;
+        }
+    }
+
+    @keyframes sant2 {
+        0% {
+            transform: rotate(0px);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

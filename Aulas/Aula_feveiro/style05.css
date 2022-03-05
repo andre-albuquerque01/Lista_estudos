@@ -1,0 +1,70 @@
+/* img{
+    width: 50%;
+    height: 50px;
+    object-fit: cover;
+} */
+/* body {
+    background-color: aqua;
+} */
+
+/* Configurar o layout da pagina e outras coisa mais  */
+/* @media (max-width: 600px) and (min-width:0px) {
+    body {
+        background-color: black;
+    }
+
+    h1 {
+        color: azure;
+    }
+} */
+
+/* Na hora de imprimir tem como mudar */
+/* @media only print {
+
+    h1 {
+        color: pink;
+    }
+}
+
+@media only screen {
+    h1 {
+        color: yellow;
+    } 
+
+}*/
+/* body{
+    display: flex;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+}
+Tela em pé
+@media (orientation : portrait){
+body{
+    display: column;
+}
+}
+Tela virada de lado
+@media (orientation : landscape){
+body{
+    display: flex;
+}
+} */
+
+
+/* se a tela tiver igual ao quadrado */
+/* @media (max-aspect-ratio: 1/1){
+    body{
+        background-color: brown;
+    }
+} */
+
+/* se a tela tiver o dobro do tamanho */
+/* @media (min-aspect-ratio: 2/1){
+    body{
+        background-color: brown;
+    }
+} */
