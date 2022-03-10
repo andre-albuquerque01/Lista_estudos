@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 09/03/2022</title>
+</head>
+
+<body>
+    <div id="form-name">
+        <label for="nome">Digite seu nome</label>
+        <input type="text" id="nome">
+        <button onclick="boas()">Enviar</button>
+        <br>
+        <span id="msg"></span>
+    </div>
+    <script>
+        function boas() {
+            let a = document.getElementById('nome').value;
+            document.querySelector('#msg').innerHTML = "Bem vindo " + a;
+            document.getElementById('form-name').style.background = 'blue';
+        }
+
+        function exemplo() {
+            // alert("Slv");
+            document.write("Slv, estamos dentro de uma função.<br>")
+        }
+
+        // Função execução
+        exemplo();
+
+        function somar(x, y) {
+            // alert(x + y);
+            return x + y;
+        }
+        // somar(5,8);
+        // alert(somar(2,6));
+        var r = somar(1, 6);
+        // alert(r);
+        document.write(`O resultado da função é de ${r}`);
+
+
+        function soma(n1, n2) {
+            return n1 + n2;
+        }
+        function subtrair(n1, n2) {
+            return n1 - n2;
+        }
+        function multiplicar(n1, n2) {
+            return n1 * n2;
+        }
+        function dividir(n1, n2) {
+            return n1 / n2;
+        }
+        function executaOperacao(funcao) {
+            let n1 = Number(document.getElementById('n1').value);
+            let n2 = Number(document.getElementById('n2').value);
+            let rs = funcao(n1, n2);
+            let campoVazio = "";
+            if (n1 == 0) {
+                // alert('Não é possível fazer a operação, pois tem que preencher o n1');
+                campoVazio = "n1";
+            } if (n2 == 0) {
+                // alert('Não é possível fazer a operação, pois tem que preencher n2');
+                campoVazio += "n1";
+            }
+            if (campoVazio == "") {
+                document.getElementById('rs').value = rs;
+            } else {
+                alert(`Você tem que preencher ${campoVazio}`);
+            }         
+        }
+    </script>
+
+    <br>
+    <input type="number" id="n1">
+    <span id="msg"></span>
+    <input type="number" id="n2"> =
+    <input type="number" id="rs" disabled>
+    <br>
+    <input type="button" value="somar" id="soma" onclick="executaOperacao(somar)">
+    <input type="button" value="subtrair" id="subtrair" onclick="executaOperacao(subtrair)">
+    <input type="button" value="multiplicar" id="multiplicar" onclick="executaOperacao(multiplicar)">
+    <input type="button" value="dividir" id="dividir" onclick="executaOperacao(dividir)">
+</body>
+
+</html>
