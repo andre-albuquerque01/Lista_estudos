@@ -54,23 +54,32 @@
         function dividir(n1, n2) {
             return n1 / n2;
         }
-        function executaOperacao(funcao) {
-            let n1 = Number(document.getElementById('n1').value);
-            let n2 = Number(document.getElementById('n2').value);
-            let rs = funcao(n1, n2);
+
+        function mudarSinal(operacao){
+            document.getElementById("sinal").innerHTML = operacao;
+        }
+
+         function executarOperacao(funcao) {
+            document.getElementById('rs').value = "";
+            mudarSinal("");
+            let n1 = + document.getElementById('n1').value;
+            let n2 = + document.getElementById('n2').value;
+            
             let campoVazio = "";
             if (n1 == 0) {
-                // alert('Não é possível fazer a operação, pois tem que preencher o n1');
-                campoVazio = "n1";
-            } if (n2 == 0) {
-                // alert('Não é possível fazer a operação, pois tem que preencher n2');
-                campoVazio += "n1";
+                campoVazio = 'n1';
             }
-            if (campoVazio == "") {
+
+            if (n2 == 0) {
+                campoVazio += 'n2';
+            }
+
+            if(campoVazio == ""){
+                let rs = funcao(n1, n2);
                 document.getElementById('rs').value = rs;
-            } else {
-                alert(`Você tem que preencher ${campoVazio}`);
-            }         
+            }else{
+                alert(`Você tem que preencher ${campoVazio}`)
+            }
         }
     </script>
 

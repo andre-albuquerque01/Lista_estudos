@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 10-03-2022</title>
+</head>
+
+<body>
+    Nome da escola <span id="nome-escola">???</span> clique nas interrogações
+    <script>
+        let text = "ASASSASA\ asasdasd";
+        document.write(`Texto da let ${text} tem ${text.length}`);
+        document.write("<br>");
+        let senai = "Senai ";
+        document.write(`Usando a função slice de fatiar '${senai.slice(2, 3)}' para retorna uma parte da String`)
+
+        document.getElementById("nome-escola").addEventListener("click", mostranome);
+        function mostranome(){
+            let a = document.getElementById("nome-escola").innerHTML;
+            document.getElementById("nome-escola").innerHTML = a.toLocaleUpperCase().replace("???","Senai");
+
+        }
+    </script>
+</body>
+
+</html>
