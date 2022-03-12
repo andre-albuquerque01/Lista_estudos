@@ -8,26 +8,112 @@
     <title>Lista de documentos</title>
 </head>
 <style>
+    *,
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* 
+    h1 {
+        text-align: center;
+        padding: 10px;
+    }
+
     .atividade {
         margin: 0 auto;
-        padding: 5px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .atividade a {
+        text-decoration: none;
+        color: rgb(150, 85, 85);
+        font-size: 20px;
+    }
+
+    .atividade a:hover {
+        text-decoration: underline;
+        color: rgb(150, 85, 0);
+    }
+
+    h2,
+    h3 {
+        font-size: 22px;
+        text-align: center;
+        color: #586123;
+    } */
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        height: 656px;
+        grid-template-areas: "t t""st st2""d d";
+        grid-template-rows: 80px 300px 80px;
+        text-align: center;
+
+    }
+
+    .title {
+        grid-area: t;
+        padding: 25px;
+        color: #f00;
+    }
+
+    .subTitle {
+        grid-area: st;
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 25px;
+    }
+    
+    a{
+        text-decoration: none;
+        color: #a12e4a;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: #1234;
+    }
+    
+    .subTitle2 {
+        grid-area: st2;
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 25px;
+    }
+
+    .dispesao {
+        grid-area: d;
+        border: 1px solid black;
+        border-radius: 25px;
+        padding: 25px;
     }
 </style>
 
 <body>
-    <h1>Aulas</h1>
-    <h3>Atividade em ordem, as atividades referentes pode conter o numero diferente</h3>
-    <div class="atividade">
-        <a href="Aulas/Atividade/atividade01.html">Atividade 1</a><br>
-        <a href="Aulas/Atividade/atividade02.html">Atividade 2</a><br>
-        <a href="Aulas/Atividade/atividade03.html">Atividade 3</a><br>
-        <a href="Aulas/Atividade/atividade04.html">Atividade 4</a><br>
-        <a href="Aulas/Atividade/atividade05.html">Atividade 5</a><br>
-        <a href="Aulas/Atividade/atividade06.html">Atividade 6</a><br>
-    </div>
-    <h2>Projeto</h2>
-    <div class="projeto">
-        <a href="Aulas/projflex/index.html">Projeto</a>
+    <div class="container">
+        <div class="title">
+            <h1>Aulas</h1>
+        </div>
+        <div class="subTitle">
+            <h2>Atividade</h2><br>
+            <a class="a" href="Aulas/Atividade/atividade01.html">Atividade 1</a><br>
+            <a class="a" href="Aulas/Atividade/atividade02.html">Atividade 2</a><br>
+            <a class="a" href="Aulas/Atividade/atividade03.html">Atividade 3</a><br>
+            <a class="a" href="Aulas/Atividade/atividade04.html">Atividade 4</a><br>
+            <a class="a" href="Aulas/Atividade/atividade05.html">Atividade 5</a><br>
+            <a class="a" href="Aulas/Atividade/atividade06.html">Atividade 6</a><br>
+        </div>
+        <div class="subTitle2">
+            <h2>Projeto</h2><br>
+            <a href="Aulas/projflex/index.html">Projeto</a>
+        </div>
+        <div class="dispesao">
+            <h3>Atividade estão em ordem, as atividades referentes pode conter o numeração diferente.</h3>
+        </div>
     </div>
 </body>
 
