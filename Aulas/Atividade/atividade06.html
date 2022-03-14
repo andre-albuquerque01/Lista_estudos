@@ -58,7 +58,8 @@
             <h1>Questã 01:<span>Calcular a média ponderada de 3 notas
                     <a href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1006"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: A média das 3 notas foi <span id="msg"></span>. <strong>Essa estva tranquila</strong></p>
+            <p id="">Resultado: A média das 3 notas foi <span id="msg"></span>. <strong>Essa estva tranquila</strong>
+            </p>
             <label for="">Nota 01:</label>
             <input type="text" id="n1">
             <label for="">Nota 02:</label>
@@ -98,7 +99,8 @@
             <h1>Questã 03:<span> Intervalo [0,25], [25,50], [50,75], [75,100] <a
                         href="https://www.urionlinejudge.com.br/judge/pt/problems/view/1037"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: O valor digita esta no intervalo <span id="msgIntervlado"></span>. <strong>Essa estava tranquila</strong></p>
+            <p id="">Resultado: O valor digita esta no intervalo <span id="msgIntervlado"></span>. <strong>Essa estava
+                    tranquila</strong></p>
             <label for="">Valor:</label>
             <input type="text" id="intervalo">
             <input type="button" value="Calcular" onclick="intervalo()">
@@ -224,7 +226,9 @@
             <h1>Questã 06:<span> Calcular o salário de um funcionário <a
                         href="https://www.urionlinejudge.com.br/repository/UOJ_1008.html"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: O funcionario <span id="msgNome"></span> vai receber <span id="msgReceber"></span>. <strong>Essa estava tranquila</strong></p>
+            <p id="">Resultado: O funcionario <span id="msgNome"></span> vai receber <span id="msgReceber"></span>.
+                <strong>Essa estava tranquila</strong>
+            </p>
             <label for="">Nome Funcionário</label>
             <input type="text" id="nome">
             <label for="">Valor Hora</label>
@@ -248,20 +252,21 @@
             <h1>Questã 07:<span> Calcular o consumo médio de um automóvel <a
                         href="https://www.urionlinejudge.com.br/repository/UOJ_1014.html"
                         target="_blank">detalhar</a></span></h1>
-            <p id="">Resultado: O automóvel fez o consumo médio de <span class="msgCombustivel"></span>. <strong>Essa estava tranquila</strong></p>
+            <p id="">Resultado: O automóvel fez o consumo médio de <span class="msgCombustivel"></span>. <strong>Essa
+                    estava tranquila</strong></p>
             <label for="">Distância percorrida</label>
             <input type="text" id="percorrida">
             <label for="">Combustível gasto</label>
-            <input type="text" id="gasto">
+            <input type="text" id="gast">
             <input type="button" value="Calcular" onclick="automovel()">
         </div>
         <script>
             function automovel() {
                 let percorrida = Number(document.getElementById('percorrida').value);
-                let gasto = Number(document.getElementById('gasto').value);
+                let gasto = Number(document.getElementById('gast').value);
                 let calcular = percorrida / gasto;
                 let final = calcular.toFixed(2);
-                document.getElementById('msgCombustivel').innerHTML = final;
+                document.querySelector('.msgCombustivel').innerHTML = calcular;
             }
         </script>
     </div>
