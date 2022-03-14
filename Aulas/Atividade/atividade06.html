@@ -73,7 +73,7 @@
                 var n1 = Number(document.getElementById('n1').value);
                 var n2 = Number(document.getElementById('n2').value);
                 var n3 = Number(document.getElementById('n3').value);
-                var r = parseFloat(n1 + n2 + n3) / 3;
+                var r = ((n1 *2) + (n2 * 3) + (n3 * 5)) / 10;
                 document.querySelector('#msg').innerHTML = (r);
             }
         </script>
@@ -88,7 +88,7 @@
         <script>
             function senha() {
                 var senha = document.getElementById('senha').value;
-                if (senha != 2022) {
+                if (senha != 2002) {
                     document.querySelector('#msgSenha').innerHTML = ("Senha Invalida");
                 } else {
                     document.querySelector('#msgSenha').innerHTML = ("Acesso Permitido");
@@ -140,7 +140,7 @@
             function salario() {
                 var salario = Number(document.getElementById('salario').value);
                 if (salario > 0 && salario <= 400) {
-                    let r = salario / 15;
+                    let r = salario * 0.15;
                     let so = salario + r;
                     let resSo = so.toFixed(1);
                     let resR = r.toFixed(2);
@@ -149,7 +149,7 @@
                     document.querySelector('#msgPercentual').innerHTML = "15";
                 }
                 else if (salario > 400 && salario <= 800) {
-                    let r = salario / 12;
+                    let r = salario * 0.12;
                     let so = salario + r;
                     let resSo = so.toFixed(1);
                     let resR = r.toFixed(2);
@@ -158,7 +158,7 @@
                     document.querySelector('#msgPercentual').innerHTML = "12";
                 }
                 else if (salario > 800 && salario <= 1200) {
-                    let r = salario / 10;
+                    let r = salario * 0.1;
                     let so = salario + r;
                     let resSo = so.toFixed(1);
                     let resR = r.toFixed(2);
