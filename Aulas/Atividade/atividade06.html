@@ -198,24 +198,28 @@
         <script>
             function imposto() {
                 var imposto = Number(document.getElementById('renda').value);
-                if (imposto > 0 && imposto < 2000) {
+                let a = 0;
+                if (imposto > 0 && imposto <= 2000) {
                     document.querySelector('#msgImposto').innerHTML = "Isento";
                     console.log('foi aqui no 1');
                 }
-                else if (imposto > 2000 && imposto < 3000) {
-                    let im = imposto * 0.08;
+                else if (imposto > 2000 && imposto <= 3000) {
+                    a = imposto - 2000;
+                    let im = a * 0.08;
                     let tot = im.toFixed(2);
                     document.querySelector('#msgImposto').innerHTML = tot;
                     console.log('foi aqui no 2');
                 }
                 else if (imposto > 3000 && imposto < 4500) {
-                    let im = imposto / 18;
+                    a = imposto - 3000;
+                    let im = a * 0.18;
                     let tot = im.toFixed(2);
                     document.querySelector('#msgImposto').innerHTML = tot;
                     console.log('foi aqui no 3');
                 }
                 else {
-                    let im = imposto / 28;
+                    a = imposto - 4500;
+                    let im = a * 0.28;
                     let tot = im.toFixed(2);
                     document.querySelector('#msgImposto').innerHTML = tot;
                     console.log('foi aqui no 4');
