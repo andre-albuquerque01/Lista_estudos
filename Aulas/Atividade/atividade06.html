@@ -212,14 +212,14 @@
                 }
                 else if (imposto > 3000 && imposto < 4500) {
                     a = imposto - 3000;
-                    let im = a * 0.18;
+                    let im = (a * 0.18) + 80;
                     let tot = im.toFixed(2);
                     document.querySelector('#msgImposto').innerHTML = tot;
                     console.log('foi aqui no 3');
                 }
-                else {
+                else if(imposto > 4500){
                     a = imposto - 4500;
-                    let im = a * 0.28;
+                    let im = (a * 0.28) + 350;
                     let tot = im.toFixed(2);
                     document.querySelector('#msgImposto').innerHTML = tot;
                     console.log('foi aqui no 4');
