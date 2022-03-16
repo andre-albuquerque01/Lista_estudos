@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 15-03-2022</title>
+</head>
+
+<body>
+    <script>
+        let car = {
+            name: "fiat",
+            modelo: "500",
+            peso: "1000kg",
+            cor: "white",
+            km: 100,
+            move: function (addkm) {
+                this.km += addkm;
+            },
+            status: function () {
+                return `<br>Dados do carro: 
+                        <br>Marca: ${car.name}
+                        <br>Modelo: ${car.modelo}
+                        <br>Peso: ${car.peso}
+                        <br>Cor: ${car.cor}
+                        <br>KM: ${car.km}`
+            }
+        };
+        //    Para ler o objeto encima, como se fosse o print_r
+        //     document.write(JSON.stringify(car));
+        //     document.write(`Dados do carro: 
+        //    <br>Marca: ${car.name}
+        //    <br>Modelo: ${car.modelo}
+        //    <br>Peso: ${car.peso}
+        //    <br>Cor: ${car.cor}
+        //    <br>KM: ${car.km}
+        //    `);
+        //     car.move(50);
+        document.write(car.status())
+        // Para alterar o objeto
+        car.cor = ("Azul");
+        car.move(100);
+        // Mesma coisa do de ci
+        car["move"](100);
+        // Para chamar a funçaõ dentro do objeto e mostrar
+        document.write(car.status());
+
+        //     car.move(50);
+        //     document.write(`<br>Dados do carro: 
+        //   <br>Marca: ${car.name}
+        //   <br>Modelo: ${car.modelo}
+        //   <br>Peso: ${car.peso}
+        //   <br>Cor: ${car.cor}
+        //   <br>KM: ${car.km}
+        //   `);
+        document.write("<br>");
+        let n = 48.758;
+        n.toPrecision()
+        document.write(n);
+        document.write("<br>");
+        n.toPrecision(1)
+        document.write(n);
+        document.write("<br>");
+        
+        // Array
+        document.write("Array<br>");
+        let as = ['Puma', 'Gugeu', 'Sa'];
+        document.write(as);
+        let i = 0;
+        document.write(`<br> O carro que está no índice ${i} =${as[i]}`);
+        as[i] = "BMW";
+        document.write(`<br> O carro que está no índice ${i} =${as[i]}<br>`);
+        document.write(as);
+        document.write(`<br> O total de carro é =${as.length}<br>`);
+        document.write(`O primeiro carro é ${as[0]}<br>`);
+        document.write(`O ultimo carro é ${as[as.length - 1]}<br>`);
+        
+        
+        document.write("<br>");
+        let text = "<ul>";
+        for (let h = 0; h < as.length; h++) {
+            // document.write(h);
+            document.write(as[h]);
+            text += `<li>${[h]} ${as[h]}</li>`
+        }
+        text += "</ul>";
+        document.write(text);
+    </script>
+</body>
+
+</html>
