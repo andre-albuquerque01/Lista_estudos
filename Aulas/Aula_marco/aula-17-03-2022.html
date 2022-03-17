@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 17-03-2022</title>
+</head>
+
+<body>
+    <button onclick="sortear()">Sortear</button>
+    <div id="demo"></div>
+    <script>
+        let nome = ["André","Albuquerque","Gonçalves"];
+        let indice = 1;
+        function sortear(){
+            if(nome.length == 0){
+                alert("Todos os nomes já foram sorteados");
+                return;
+            }
+            // Para gerar aleatorio
+            let saida = (Math.random()* nome.length);
+            let sorteado = Math.trunc(saida);
+            let p = document.createElement("p");
+            p.innerHTML = `${indice++} - ${nome[sorteado]} `;
+            // Para mostrar o que gerou
+            document.getElementById('demo').append(p);
+            nome.splice(sorteado, 1);
+        }
+    </script>
+</body>
+
+</html>

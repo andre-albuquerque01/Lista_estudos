@@ -17,7 +17,8 @@
     <button onclick="removerUltimo()">Remover o Array</button>
     <button onclick="removerPrimeiro()">Remover o Primeiro</button>
     <button onclick="removerAlgo()">Remover a selecionada</button>
-    <button onclick="incluir()">incluir no Array</button>
+    <button onclick="desafio()">Desafio de remover</button>
+    <button onclick="incluir()">incluir nome</button>
     <button onclick="limpar()">Limpar</button>
     <div id="demo"></div>
     <script>
@@ -75,7 +76,8 @@
             }
         }
         function removerPrimeiro() {
-            if (confirm("Realmente deseja excluir o dado?")) {
+            let nomes = nome[0];
+            let con = confirm(`Realmente deseja excluir o ${nomes} ?`); {
                 nome.shift();
                 lacoForEach();
             }
@@ -90,9 +92,23 @@
         }
         function incluir() {
             let novoNome = prompt("Digite o novo o aluno");
-            nome.push(novoNome);
-            lacoForEach();
-        }       
+            if(novoNome == null)return;
+            if (novoNome == "") {
+                alert("Necessario insirir o nome");
+            } else {
+                nome.push(novoNome);
+                lacoForEach();
+            }
+        }
+        function desafio() {
+            let nomes = nome[nome.length - 1];
+            let con = confirm(`Realmente deseja excluir o ${nomes} ?`);
+            if (con) {
+                nome.pop();
+                lacoForEach();
+            }
+
+        }
     </script>
 </body>
 
