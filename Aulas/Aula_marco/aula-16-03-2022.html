@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 15-03-2022</title>
+</head>
+
+<body>
+    <button onclick="lacoForEach()">Exemplo forEach</button>
+    <button onclick="exeFor()">Exemplo for</button>
+    <button onclick="decexeFor()">Exemplo for dec</button>
+    <button onclick="forIn()">Exemplo for In</button>
+    <button onclick="repetir()">Exemplo for repetição</button>
+    <button onclick="removerUltimo()">Remover o Array</button>
+    <button onclick="removerPrimeiro()">Remover o Primeiro</button>
+    <button onclick="removerAlgo()">Remover a selecionada</button>
+    <button onclick="incluir()">incluir no Array</button>
+    <button onclick="limpar()">Limpar</button>
+    <div id="demo"></div>
+    <script>
+        var nome = ["Andre", "Albuquerque", "Gonçalves"];
+        function limpar() {
+            document.getElementById('demo').innerHTML = "";
+        }
+        function lacoForEach() {
+            let text = "Exemplo com for each dentro da função <br><ul>";
+            nome.forEach(listarNome);
+            text += "</ul>";
+            function listarNome(valor) {
+                text += `<li>${valor.toUpperCase()}</li>`;
+            }
+            document.getElementById('demo').innerHTML = text;
+        }
+        function exeFor() {
+            let text1 = "Exemplo com for dentro da função <br><ol>";
+            for (i = 0; i < nome.length; i++) {
+                text1 += `<li>${nome[i]}</li>`;
+            }
+            text1 += "</ol>";
+            document.getElementById('demo').innerHTML = text1;
+        }
+        function decexeFor() {
+            let text1 = "Exemplo com for dentro da função <br><ol>";
+            for (i = nome.length - 1; i != 0; i--) {
+                text1 += `<li>${nome[i]}</li>`;
+            }
+            text1 += "</ol>";
+            document.getElementById('demo').innerHTML = text1;
+        }
+        function forIn() {
+            let text1 = "Exemplo com for in<br><ul>";
+            for (i in nome) {
+                text1 += `<li>${nome[i]}</li>`;
+            }
+            text1 += "</ul>";
+            document.getElementById('demo').innerHTML = text1;
+        }
+        function repetir() {
+            let a = prompt("Digita");
+            for (i = 1; i <= 3; i++) {
+                alert(`(${i}) ${a}`);
+            }
+        }
+        function removerUltimo() {
+            let con = confirm("Realmente deseja excluir o dado?");
+            if (con) {
+                nome.pop();
+                lacoForEach();
+            } else {
+                lacoForEach();
+                alert("Não foi excluído");
+            }
+        }
+        function removerPrimeiro() {
+            if (confirm("Realmente deseja excluir o dado?")) {
+                nome.shift();
+                lacoForEach();
+            }
+        }
+        function removerAlgo() {
+            let as = prompt("Digite o nome da pessoa que quer remover");
+            let ina = nome.indexOf(as)
+            if (ina >= 0) {
+                nome.splice(as, 1);
+                lacoForEach();
+            }
+        }
+        function incluir() {
+            let novoNome = prompt("Digite o novo o aluno");
+            nome.push(novoNome);
+            lacoForEach();
+        }       
+    </script>
+</body>
+
+</html>
