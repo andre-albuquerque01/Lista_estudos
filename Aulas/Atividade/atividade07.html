@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade 09</title>
+</head>
+<style>
+    input[type='text'],
+    select {
+        display: block;
+    }
+
+    h1 {
+        font-size: 16px;
+        margin-bottom: 0px;
+        margin-bottom: 6px;
+    }
+
+    span {
+        font-size: 13px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: darkblue;
+    }
+
+    p {
+        margin: 0px;
+    }
+
+    body {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .questao {
+        background-color: #e0f7faa1;
+        padding: 1px 0px 10px 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+
+    .questao:hover {
+        background-color: #e0f7fa;
+    }
+
+    input[type='button'] {
+        margin-top: 10px;
+    }
+
+    .mao {
+        font-size: 30px;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+    .adversario {
+        font-size: 50px;
+
+    }
+</style>
+
+<body>
+    <div id="corpo">
+        <div class="questao">
+            <h1>
+                Questã 01:<span>Tabuada
+                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+            </h1>
+            <input type="text" id="numero" style="display: inline" />
+            <input type="button" value="Calcular" onclick="tabuada()" />
+            <p id="">Resultado: <br> <span id="demo"></span></p>
+        </div>
+        <script>
+            function tabuada() {
+                let numero = Number(document.getElementById('numero').value);
+                n1 = numero * 1;
+                n2 = numero * 2;
+                n3 = numero * 3;
+                n4 = numero * 4;
+                n5 = numero * 5;
+                n6 = numero * 6;
+                n7 = numero * 7;
+                n8 = numero * 8;
+                n9 = numero * 9;
+                n10 = numero * 10;
+                document.querySelector('#demo').innerHTML = `${numero} * ${n1} = ${n1}<br>${numero} * ${n2} = ${n2}<br>
+                ${numero} * ${n3} = ${n3}<br>${numero} * ${n4} = ${n4}<br>${numero} * ${n5} = ${n5}<br>${numero} * ${n6} = ${n6}<br>${numero} * ${n7} = ${n7}
+                <br>${numero} * ${n8} = ${n8}<br>${numero} * ${n9} = ${n9}<br>${numero} * ${n10} = ${n10}`;
+            }
+        </script>
+        <div class="questao">
+            <h1>
+                Questã 02:<span>Mostrar os números entre 2 valores
+                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+            </h1>
+            <p id="">Resultado: Os número entre A e Z são (<span id="alfa"></span>).</p>
+            <label for="">Valor 01:</label>
+            <input type="text" id="al1" />
+            <label for="">Valor 02:</label>
+            <input type="text" id="al2" />
+            <input type="button" value="Executar" onclick="alfabelto()" />
+        </div>
+        <script>
+            function alfabelto() {
+                let alfabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                let al1 = Number(document.getElementById('al1').value);
+                let al2 = Number(document.getElementById('al2').value);
+                let mani = alfabet.substr(al1, al2);
+                document.querySelector('#alfa').innerHTML = mani;
+            }
+        </script>
+        <div class="questao">
+            <h1>
+                Questã 03:<span>
+                    Lista armazenada
+                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+            </h1>
+            <p id="">Resultado: A lista de itens é [ <span id="arma"></span> ]</p>
+            <label for="">Item:</label>
+            <input type="text" id="armazena" />
+            <input type="button" value="Add" onclick="add()">
+            <input type="button" value="Show" onclick="show()">
+            <input type="button" value="Clear" onclick="clear()">
+        </div>
+        <script>
+            let array = [];
+            function add() {
+                let armazena = document.getElementById('armazena').value;
+                array.push(armazena);
+            }
+            function show() {
+                document.querySelector('#arma').innerHTML = `${array}`;
+            }
+            function clear() {
+                document.querySelector('#arma').innerHTML = null;
+            }
+        </script>
+        <div class="questao">
+            <h1>
+                Questã 04:<span>Mega SENA
+                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+            </h1>
+            <p id="">Resultado: <span id="sort"></span> </p>
+            <input type="button" value="Sortear!" onclick="sortear()" />
+        </div>
+        <script>
+            function sortear() {
+                let saida1 = (Math.random() * 60);
+                let saida2 = (Math.random() * 60);
+                let saida3 = (Math.random() * 60);
+                let saida4 = (Math.random() * 60);
+                let saida5 = (Math.random() * 60);
+                let saida6 = (Math.random() * 60);
+                let sorteado1 = Math.trunc(saida1);
+                let sorteado2 = Math.trunc(saida2);
+                let sorteado3 = Math.trunc(saida3);
+                let sorteado4 = Math.trunc(saida4);
+                let sorteado5 = Math.trunc(saida5);
+                let sorteado6 = Math.trunc(saida6);
+                document.querySelector('#sort').innerHTML = `${sorteado1}, ${sorteado2}, ${sorteado3}, ${sorteado4}, ${sorteado5}, ${sorteado6}`;
+            }
+        </script>
+        <div class="questao">
+            <h1>
+                Questã 05:<span>
+                    Lista homens e mulheres
+                    <a href="detalhes.html" target="_blank">detalhar</a></span>
+            </h1>
+            <p id="">
+                Resultado: <br />Lista de homens [ <span id="macho"></span> ] <br />Lista de
+                mulheres [ <span id="femea"></span> ]
+            </p>
+            <label for="">Nome:</label>
+            <input type="text" id="nomePessoa">
+            <label for="">Sexo:</label>
+            <select name="sexo" id="sexo">
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+            <br>
+            <input type="button" value="Add" onclick="addS()">
+            <input type="button" value="Show" onclick="showS()">
+            <input type="button" value="Clear" onclick="clearS()">
+
+            <script>
+                var nome = document.querySelector('#nomePessoa').value;
+                console.log(nome);
+                var sexo = document.getElementById('sexo').value;
+                // console.log(sexo);
+                var nomesH = [];
+                var nomesM = [];
+                function addS() {
+                    nomesH.push(nome);
+                    console.log("Foi aqui m")
+                    nomesM.push(nome);
+                    console.log("Foi aqui f tambem")
+                }
+                function showS() {
+                    document.querySelector('#macho').innerHTML = `${nomesH}, `;
+                    document.querySelector('#femea').innerHTML = `${nomesM}, `;
+                }
+                function clearS() {
+                    document.getElementById('macho').innerHTML = "  ";
+                    document.getElementById('femea').innerHTML = " ";
+                }
+            </script>
+        </div>
+        <div class="questao">
+            <h1>
+                DESAFIOO!:<span>
+                    Jo-Ken-Po <a href="detalhes.html" target="_blank">detalhar</a></span>
+            </h1>
+            <p id="">Resultado: [Vitótio|Derrota|Empate]</p>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
+                id="punho">✊🏽</span>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
+                id="palma">🖐🏽</span>
+            <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
+                id="tesoura">✌🏽</span>
+            #
+            <span class="adversario">👋🏽</span>
+        </div>
+        <script>
+            let punho = document.getElementById('punho').value;
+            let palma = document.getElementById('palma').value;
+            let tesoura = document.getElementById('tesoura').value;
+            function JoKenPo() {
+                if (punho == palma) {
+                    document.querySelector().innerHTML = "Venceu o papel";
+                }
+                if (punho == tesoura) {
+                    document.querySelector().innerHTML = "Venceu a pedra";
+                }
+                if (punho == punho) {
+                    document.querySelector().innerHTML = "Empate";
+                }
+                if (tesoura == tesoura) {
+                    document.querySelector().innerHTML = "Empate";
+                }
+                if (palma == tesoura) {
+                    document.querySelector().innerHTML = "Vendeu a tesoura";
+                }
+                if (palma == palma) {
+                    document.querySelector().innerHTML = "Empate";
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
