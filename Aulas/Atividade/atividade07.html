@@ -124,7 +124,7 @@
             <input type="text" id="armazena" />
             <input type="button" value="Add" onclick="add()">
             <input type="button" value="Show" onclick="show()">
-            <input type="button" value="Clear" onclick="clear()">
+            <input type="button" value="Clear" onclick="clearThis()">
         </div>
         <script>
             let array = [];
@@ -133,10 +133,10 @@
                 array.push(armazena);
             }
             function show() {
-                document.querySelector('#arma').innerHTML = `${array}`;
+                document.querySelector('#arma').innerHTML = `${array}, `;
             }
-            function clear() {
-                document.querySelector('#arma').innerHTML = null;
+            function clearThis() {
+                document.querySelector('#arma').innerHTML = "   ";
             }
         </script>
         <div class="questao">
@@ -174,9 +174,9 @@
                 Resultado: <br />Lista de homens [ <span id="macho"></span> ] <br />Lista de
                 mulheres [ <span id="femea"></span> ]
             </p>
-            <label for="">Nome:</label>
+            <label>Nome:</label>
             <input type="text" id="nomePessoa">
-            <label for="">Sexo:</label>
+            <label>Sexo:</label>
             <select name="sexo" id="sexo">
                 <option value="M">Masculino</option>
                 <option value="F">Feminino</option>
@@ -185,67 +185,75 @@
             <input type="button" value="Add" onclick="addS()">
             <input type="button" value="Show" onclick="showS()">
             <input type="button" value="Clear" onclick="clearS()">
-
-            <script>
-                var nome = document.querySelector('#nomePessoa').value;
-                console.log(nome);
-                var sexo = document.getElementById('sexo').value;
-                // console.log(sexo);
-                var nomesH = [];
-                var nomesM = [];
-                function addS() {
-                    nomesH.push(nome);
-                    console.log("Foi aqui m")
-                    nomesM.push(nome);
-                    console.log("Foi aqui f tambem")
-                }
-                function showS() {
-                    document.querySelector('#macho').innerHTML = `${nomesH}, `;
-                    document.querySelector('#femea').innerHTML = `${nomesM}, `;
-                }
-                function clearS() {
-                    document.getElementById('macho').innerHTML = "  ";
-                    document.getElementById('femea').innerHTML = " ";
-                }
-            </script>
         </div>
+        <script>
+            let nomesH = [];
+            let nomesM = [];
+            function addS() {
+                let nome = document.getElementById('nomePessoa').value;
+                let sexo = document.getElementById('sexo').value;
+                if (sexo == "M") {
+                    nomesH.push(nome);
+                } else {
+                    nomesM.push(nome);
+                }
+            }
+            function showS() {
+                document.querySelector('#macho').innerHTML = `${nomesH}, `;
+                document.querySelector('#femea').innerHTML = `${nomesM}, `;
+            }
+            function clearS() {
+                document.getElementById('macho').innerHTML = "  ";
+                document.getElementById('femea').innerHTML = " ";
+            }
+        </script>
+
         <div class="questao">
             <h1>
                 DESAFIOO!:<span>
                     Jo-Ken-Po <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado: [Vitótio|Derrota|Empate]</p>
+            <p id="">Resultado: [Vitótio|Derrota|Empate] <span class="jogo"></span></p>
             <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
-                id="punho">✊🏽</span>
+                onclick="JoKenPo(1)">✊🏽</span>
             <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
-                id="palma">🖐🏽</span>
+                onclick="JoKenPo(2)">🖐🏽</span>
             <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
-                id="tesoura">✌🏽</span>
+                onclick="JoKenPo(3)">✌🏽</span>
             #
             <span class="adversario">👋🏽</span>
         </div>
         <script>
-            let punho = document.getElementById('punho').value;
-            let palma = document.getElementById('palma').value;
-            let tesoura = document.getElementById('tesoura').value;
-            function JoKenPo() {
-                if (punho == palma) {
-                    document.querySelector().innerHTML = "Venceu o papel";
+            function JoKenPo(escolha) {
+                let escolhaJ = escolha;
+                let escolhaC = Math.trunc((Math.random() * (3 - 1 + 1))) + 1;
+                // console.log(escolhaC);
+                if ((escolhaJ == 1) && (escolhaC == 1)) {
+                    document.querySelector(".jogo").innerHTML = "Empate";
                 }
-                if (punho == tesoura) {
-                    document.querySelector().innerHTML = "Venceu a pedra";
+                else if((escolhaJ == 1) && (escolhaC == 2)) {
+                    document.querySelector(".jogo").innerHTML = "Venceu o papel";
                 }
-                if (punho == punho) {
-                    document.querySelector().innerHTML = "Empate";
+                else if ((escolhaJ == 1) && (escolhaC == 3)) {
+                    document.querySelector(".jogo").innerHTML = "Venceu o pedra";
                 }
-                if (tesoura == tesoura) {
-                    document.querySelector().innerHTML = "Empate";
+                if ((escolhaJ == 2) && (escolhaC == 1)) {
+                    document.querySelector(".jogo").innerHTML = "Venceu o papel";
                 }
-                if (palma == tesoura) {
-                    document.querySelector().innerHTML = "Vendeu a tesoura";
+                if ((escolhaJ == 2) && (escolhaC == 2)) {
+                    document.querySelector(".jogo").innerHTML = "Empate";
                 }
-                if (palma == palma) {
-                    document.querySelector().innerHTML = "Empate";
+                else if ((escolhaJ == 2) && (escolhaC == 3)) {
+                    document.querySelector(".jogo").innerHTML = "Venceu a tesoura";
+                }
+                else if ((escolhaJ == 3) && (escolhaC == 1)) {
+                    document.querySelector(".jogo").innerHTML = "Venceu o pedra";
+                }
+                else if ((escolhaJ == 3) && (escolhaC == 2)) {
+                    document.querySelector(".jogo").innerHTML = "Venceu a tesoura";
+                }
+                else if ((escolhaJ == 3) && (escolhaC == 3)) {
+                    document.querySelector(".jogo").innerHTML = "Empate";
                 }
             }
         </script>
