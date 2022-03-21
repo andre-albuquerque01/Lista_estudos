@@ -213,7 +213,8 @@
                 DESAFIOO!:<span>
                     Jo-Ken-Po <a href="detalhes.html" target="_blank">detalhar</a></span>
             </h1>
-            <p id="">Resultado: [Vitótio|Derrota|Empate] <span class="jogo"></span></p>
+            <p id="">Resultado: [ <span class="jogo"> </span>] </span></p>
+            <p>Obs: Está jogando contra o computador</p>
             <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
                 onclick="JoKenPo(1)">✊🏽</span>
             <span onmouseover="this.style.fontSize = '50px'" onmouseout="this.style.fontSize = '30px'" class="mao"
@@ -227,30 +228,30 @@
             function JoKenPo(escolha) {
                 let escolhaJ = escolha;
                 let escolhaC = Math.trunc((Math.random() * (3 - 1 + 1))) + 1;
-                // console.log(escolhaC);
+                console.log(escolhaC);
                 if ((escolhaJ == 1) && (escolhaC == 1)) {
                     document.querySelector(".jogo").innerHTML = "Empate";
                 }
                 else if ((escolhaJ == 1) && (escolhaC == 2)) {
-                    document.querySelector(".jogo").innerHTML = "Venceu o papel";
+                    document.querySelector(".jogo").innerHTML = "Derrota";
                 }
                 else if ((escolhaJ == 1) && (escolhaC == 3)) {
-                    document.querySelector(".jogo").innerHTML = "Venceu o pedra";
+                    document.querySelector(".jogo").innerHTML = "Vitoria";
                 }
                 if ((escolhaJ == 2) && (escolhaC == 1)) {
-                    document.querySelector(".jogo").innerHTML = "Venceu o papel";
+                    document.querySelector(".jogo").innerHTML = "Vitoria";
                 }
                 if ((escolhaJ == 2) && (escolhaC == 2)) {
                     document.querySelector(".jogo").innerHTML = "Empate";
                 }
                 else if ((escolhaJ == 2) && (escolhaC == 3)) {
-                    document.querySelector(".jogo").innerHTML = "Venceu a tesoura";
+                    document.querySelector(".jogo").innerHTML = "Derrota";
                 }
                 else if ((escolhaJ == 3) && (escolhaC == 1)) {
-                    document.querySelector(".jogo").innerHTML = "Venceu o pedra";
+                    document.querySelector(".jogo").innerHTML = "Derrota";
                 }
                 else if ((escolhaJ == 3) && (escolhaC == 2)) {
-                    document.querySelector(".jogo").innerHTML = "Venceu a tesoura";
+                    document.querySelector(".jogo").innerHTML = "Vitoria";
                 }
                 else if ((escolhaJ == 3) && (escolhaC == 3)) {
                     document.querySelector(".jogo").innerHTML = "Empate";
